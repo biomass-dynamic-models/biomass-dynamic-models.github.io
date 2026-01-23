@@ -11,12 +11,12 @@ excerpt: >
 feature_row:
   - title: "Model implementation"
     excerpt: "View instructions for fitting the model."
-    url: "https://github.com/biomass-dynamic-models/r-packages/bdm"
+    url: "https://github.com/biomass-dynamic-models/r-packages/bdm/docs/articles/bdm.html"
     btn_class: "btn--primary"
     btn_label: "bdm"
   - title: "Intrinsic growth"
     excerpt: "View instructions for preparing a prior of the intrinsic growth."
-    url: "https://github.com/biomass-dynamic-models/r-packages/lhm"
+    url: "https://github.com/biomass-dynamic-models/r-packages/lhm/docs/articles/lhm.html"
     btn_class: "btn--primary"
     btn_label: "lhm" 
 ---
