@@ -9,16 +9,16 @@ excerpt: >
   A bayesian state-space biomass dynamic model for fisheries stock assessment.<br />
   <small><a href="https://github.com/biomass-dynamic-models">Organisation Home Page</a></small>
 feature_row:
-  - title: "Input Data"
-    excerpt: "View instructions for preparation of the input data."
-    url: "https://sefra-seabirds.github.io/docs/sefraInputs"
+  - title: "Model implementation"
+    excerpt: "View instructions for fitting the model."
+    url: "https://github.com/biomass-dynamic-models/r-packages/bdm"
     btn_class: "btn--primary"
-    btn_label: "Prepare data"
+    btn_label: "Run model"
   - title: "Model Code"
     excerpt: "View vignette describing execution of the model code."
-    url: "https://sefra-seabirds.github.io/docs/sefra"
+    url: "https://github.com/biomass-dynamic-models/r-packages/lhm"
     btn_class: "btn--primary"
-    btn_label: "View code" 
+    btn_label: "Prepare prior" 
 ---
 
 {% include feature_row %}
