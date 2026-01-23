@@ -4,10 +4,10 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/albatross.jpg
+  overlay_image: /assets/images/tuna.jpg
 excerpt: >
-  Spatially explicit fisheries risk assessment for the southern bluefin tuna surface longline fishery.<br />
-  <small><a href="https://github.com/sefra-seabirds">Organisation Home Page</a></small>
+  A bayesian state-space biomass dynamic model for fisheries stock assessment.<br />
+  <small><a href="https://github.com/biomass-dynamic-models">Organisation Home Page</a></small>
 feature_row:
   - title: "Input Data"
     excerpt: "View instructions for preparation of the input data."
