@@ -13,12 +13,12 @@ feature_row:
     excerpt: "View instructions for fitting the model."
     url: "https://github.com/biomass-dynamic-models/r-packages/bdm"
     btn_class: "btn--primary"
-    btn_label: "Run model"
-  - title: "Model Code"
-    excerpt: "View vignette describing execution of the model code."
+    btn_label: "bdm"
+  - title: "Intrinsic growth"
+    excerpt: "View instructions for preparing a prior of the intrinsic growth."
     url: "https://github.com/biomass-dynamic-models/r-packages/lhm"
     btn_class: "btn--primary"
-    btn_label: "Prepare prior" 
+    btn_label: "lhm" 
 ---
 
 {% include feature_row %}
