@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: SEFRA-seabirds
+title: Biomass dynamic models
 email: cescapecs@gmail.com
-description: Spatially explicit fisheries risk assessment for the southern bluefin tuna surface longline fishery.
+description: Biomass dynamic models for fisheries stock assessment.
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 search: true
-url: https://sefra-seabirds.github.io
+url: https://biomass-dynamic-models.github.io
 
 # Build settings
 markdown: kramdown
@@ -71,7 +71,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sefra-seabirds"
+      url: "https://github.com/biomass-dynamic-models"
 
 defaults:
   # _posts
