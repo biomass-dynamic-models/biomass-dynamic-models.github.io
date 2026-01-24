@@ -30,11 +30,12 @@ lhm(ainf, iter = 1, ...)
 Initialisation is usually through a call to `lhm(ainf,iter)`. Using this
 approach specific life-history data can then be included through the
 assignment functions
-[`nmort`](https://biomass-dynamic-models.github.io/lhm/reference/nmort.md),
-[`size`](https://biomass-dynamic-models.github.io/lhm/reference/size.md),
-[`mass`](https://biomass-dynamic-models.github.io/lhm/reference/mass.md),
-[`sr`](https://biomass-dynamic-models.github.io/lhm/reference/sr.md) and
-[`maturity`](https://biomass-dynamic-models.github.io/lhm/reference/maturity.md).
+[`nmort`](https://biomass-dynamic-models.github.io/docs/lhm/reference/nmort.md),
+[`size`](https://biomass-dynamic-models.github.io/docs/lhm/reference/size.md),
+[`mass`](https://biomass-dynamic-models.github.io/docs/lhm/reference/mass.md),
+[`sr`](https://biomass-dynamic-models.github.io/docs/lhm/reference/sr.md)
+and
+[`maturity`](https://biomass-dynamic-models.github.io/docs/lhm/reference/maturity.md).
 
 ## Slots
 
@@ -61,20 +62,21 @@ assignment functions
 ## See also
 
 See the appropriate documentation in
-[`mass`](https://biomass-dynamic-models.github.io/lhm/reference/mass.md),
-[`maturity`](https://biomass-dynamic-models.github.io/lhm/reference/maturity.md),
-[`nmort`](https://biomass-dynamic-models.github.io/lhm/reference/nmort.md),
-[`size`](https://biomass-dynamic-models.github.io/lhm/reference/size.md),
-[`sr`](https://biomass-dynamic-models.github.io/lhm/reference/sr.md) and
-[`survivorship`](https://biomass-dynamic-models.github.io/lhm/reference/survivorship.md)
+[`mass`](https://biomass-dynamic-models.github.io/docs/lhm/reference/mass.md),
+[`maturity`](https://biomass-dynamic-models.github.io/docs/lhm/reference/maturity.md),
+[`nmort`](https://biomass-dynamic-models.github.io/docs/lhm/reference/nmort.md),
+[`size`](https://biomass-dynamic-models.github.io/docs/lhm/reference/size.md),
+[`sr`](https://biomass-dynamic-models.github.io/docs/lhm/reference/sr.md)
+and
+[`survivorship`](https://biomass-dynamic-models.github.io/docs/lhm/reference/survivorship.md)
 for how these are specified, accessed and assigned. See documentation
 for
-[`rCalc`](https://biomass-dynamic-models.github.io/lhm/reference/rCalc.md)
+[`rCalc`](https://biomass-dynamic-models.github.io/docs/lhm/reference/rCalc.md)
 on how to calculate \\r\\ from an `lhm` object. Use
-[`iterate`](https://biomass-dynamic-models.github.io/lhm/reference/iterate.md)
+[`iterate`](https://biomass-dynamic-models.github.io/docs/lhm/reference/iterate.md)
 to increase the number of iterations after the object has been created.
 Use
-[`iteration`](https://biomass-dynamic-models.github.io/lhm/reference/iteration.md)
+[`iteration`](https://biomass-dynamic-models.github.io/docs/lhm/reference/iteration.md)
 to access a particular iteration.
 
 ## Examples

@@ -1,7 +1,7 @@
 # Access or assign mass at age
 
 This function can be used to access or assign the biomass at age in an
-[`lhm`](https://biomass-dynamic-models.github.io/lhm/reference/lhm-class.md)
+[`lhm`](https://biomass-dynamic-models.github.io/docs/lhm/reference/lhm-class.md)
 object.
 
 ## Usage
@@ -26,7 +26,7 @@ mass(object) <- value
 - object:
 
   a
-  [`lhm`](https://biomass-dynamic-models.github.io/lhm/reference/lhm-class.md)
+  [`lhm`](https://biomass-dynamic-models.github.io/docs/lhm/reference/lhm-class.md)
   object
 
 - value:

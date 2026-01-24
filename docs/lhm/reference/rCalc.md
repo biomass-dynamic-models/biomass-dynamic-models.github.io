@@ -21,7 +21,7 @@ rCalc(.Object)
 ## Value
 
 A
-[`prior`](https://biomass-dynamic-models.github.io/lhm/reference/prior-class.md)
+[`prior`](https://biomass-dynamic-models.github.io/docs/lhm/reference/prior-class.md)
 class object containing a vector of values for \\r\\.
 
 ## Examples

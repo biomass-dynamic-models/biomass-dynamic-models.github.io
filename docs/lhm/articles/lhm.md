@@ -6,7 +6,7 @@ If life history data are available we can populate an object of the
 `lhm` class, which is obtained from the `lhm` (life-history module)
 package, and is used to store and manipulate life-history data.
 Monte-Carlo samples are generated, and application of the
-[`lhm::rCalc`](https://biomass-dynamic-models.github.io/lhm/reference/rCalc.md)
+[`lhm::rCalc`](https://biomass-dynamic-models.github.io/docs/lhm/reference/rCalc.md)
 function to this class of object calcuates values of the intrinsic
 growth rate $r$ for each iteration, producing an object of the `prior`
 class. The `prior` class contains a numeric vector with an additional

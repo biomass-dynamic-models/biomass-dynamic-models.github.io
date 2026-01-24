@@ -3,7 +3,7 @@
 This function can be used to access the survivorship at age contained
 within a `lhm` object. The survivorship is calculated following an
 assignment of the natural mortality (using
-[`nmort`](https://biomass-dynamic-models.github.io/lhm/reference/nmort.md))
+[`nmort`](https://biomass-dynamic-models.github.io/docs/lhm/reference/nmort.md))
 and assumed to be one for the first age class.
 
 ## Usage

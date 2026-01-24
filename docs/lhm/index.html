@@ -49,6 +49,8 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="life-history-module">Life history module<a class="anchor" aria-label="anchor" href="#life-history-module"></a>
 </h1></div>
+<!-- badges: start -->
+
 <p>Module for the storage and processing of life-history data, designed to allow the calculation of derived parameters from life-history theory. Currently it allows calculation of the intrinsic growth rate using the Euler-Lotka equation.</p>
 <p>Outputs from this package are used by the <code>bdm</code> package, which implements a Bayesian biomass dynamic model for estimation of population status using empirical catch and abundance data. In this instance the intrinsic growth rate calculated by <code>lhm</code> is used as prior for model fitting by <code>bdm</code>.</p>
 </div>
@@ -82,7 +84,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/biomass-dynamic-models/r-packages/actions/workflows/check-lhm-release.yaml" class="external-link"><img src="https://github.com/biomass-dynamic-models/r-packages/actions/workflows/check-lhm-release.yaml/badge.svg" alt="R-CMD-check (lhm)"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>

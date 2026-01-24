@@ -2,7 +2,7 @@
 
 This function can be used to access or assign the stock recruitment
 function in an
-[`lhm`](https://biomass-dynamic-models.github.io/lhm/reference/lhm-class.md)
+[`lhm`](https://biomass-dynamic-models.github.io/docs/lhm/reference/lhm-class.md)
 object.
 
 ## Usage
@@ -47,7 +47,7 @@ sr(object) <- value
 ## Details
 
 When executing
-[`rCalc`](https://biomass-dynamic-models.github.io/lhm/reference/rCalc.md)
+[`rCalc`](https://biomass-dynamic-models.github.io/docs/lhm/reference/rCalc.md)
 the recruitment functions are used to calculate the maximum recruits per
 spawner, using steepness and the equilibrium spawning biomass per
 recruit \\SBPR\\. For the Beverton-Holt stock recruitment function
