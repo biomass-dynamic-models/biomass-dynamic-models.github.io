@@ -38,6 +38,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/biomass-dynamic-models/r-packages/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -48,11 +49,18 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="life-history-module">Life history module<a class="anchor" aria-label="anchor" href="#life-history-module"></a>
 </h1></div>
-<p><a href="https://github.com/cttedwards/lhm/actions/workflows/check-release.yaml" class="external-link"><img src="https://github.com/cttedwards/lhm/actions/workflows/check-release.yaml/badge.svg" alt="R-CMD-check"></a></p>
-<p>Module for the storage and processing of life-history data, designed to allow the calculation of derived parameters from life-history theory. Currently it only allows calculation of the intrinsic growth rate <img src="https://render.githubusercontent.com/render/math?math=\Large%20r"> using the Euler-Lotka equation.</p>
-<p>Outputs from this package, specifically <img src="https://render.githubusercontent.com/render/math?math=\Large%20r">, are used by the <code>bdm</code> package, which implements a Bayesian biomass dynamic model for estimation of population status using empirical catch and abundance data. In this instance the <img src="https://render.githubusercontent.com/render/math?math=\Large%20r"> calculated by <code>lhm</code> is used as prior for model fitting by <code>bdm</code>.</p>
+<p>Module for the storage and processing of life-history data, designed to allow the calculation of derived parameters from life-history theory. Currently it allows calculation of the intrinsic growth rate using the Euler-Lotka equation.</p>
+<p>Outputs from this package are used by the <code>bdm</code> package, which implements a Bayesian biomass dynamic model for estimation of population status using empirical catch and abundance data. In this instance the intrinsic growth rate calculated by <code>lhm</code> is used as prior for model fitting by <code>bdm</code>.</p>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/biomass-dynamic-models/r-packages/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/biomass-dynamic-models/r-packages/issues" class="external-link">Report a bug</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>GPL (&gt;=3)</li>
