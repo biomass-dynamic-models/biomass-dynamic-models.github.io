@@ -18,7 +18,7 @@ feature_row:
     excerpt: "View package code and vignettes for preparing a prior of the intrinsic growth."
     url: "https://biomass-dynamic-models.github.io/docs/lhm"
     btn_class: "btn--primary"
-    btn_label: "llhm 
+    btn_label: "lhm" 
 ---
 
 {% include feature_row %}
