@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/tuna.jpg
 excerpt: >
   Bayesian state-space biomass dynamic models for fisheries stock assessment.<br />
-  <small><a href="https://github.com/biomass-dynamic-models">Organisation Home Page</a></small>
+  <small><a href="https://github.com/biomass-dynamic-models">Organisation GitHub Page</a></small>
 feature_row:
   - title: "Model implementation"
     excerpt: "View package code and vignettes for fitting a Bayesian biomass dynamic model to fisheries catch rate data."
