@@ -16,9 +16,9 @@ feature_row:
     btn_label: "bdm"
   - title: "Intrinsic growth"
     excerpt: "View package code and vignettes for preparing a prior of the intrinsic growth."
-    url: "https://github.com/biomass-dynamic-models/r-packages/tree/main/lhm/docs"
+    url: "https://biomass-dynamic-models.github.io/docs/lhm"
     btn_class: "btn--primary"
-    btn_label: "lhm" 
+    btn_label: "llhm 
 ---
 
 {% include feature_row %}
