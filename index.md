@@ -10,7 +10,7 @@ excerpt: >
   <small><a href="https://github.com/biomass-dynamic-models">Organisation GitHub Page</a></small>
 feature_row:
   - title: "Model implementation"
-    excerpt: "View package code and vignettes for fitting a Bayesian biomass dynamic model to fisheries catch rate data."
+    excerpt: "View package code and vignettes for fitting to fisheries catch rate data."
     url: "https://biomass-dynamic-models.github.io/docs/bdm"
     btn_class: "btn--primary"
     btn_label: "bdm"
