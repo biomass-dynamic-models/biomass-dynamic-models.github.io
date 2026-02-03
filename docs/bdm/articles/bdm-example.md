@@ -296,12 +296,3 @@ knitr::kable(apply(mdl.project$depletion, 2:3, median)[nrow(dep.project), ,
 |      |    1 |    2 |    3 |
 |:-----|-----:|-----:|-----:|
 | 2112 | 0.93 | 0.84 | 0.71 |
-
-``` r
-
-# display kobe plot
-proj <- as.kobe(mdl, mdl.project, year = max(mdl@data$time))
-kobePhase(proj) + geom_point(aes(stock, harvest, col = projection_value))
-```
-
-![](fig/bdm-examples-hakproj-1.png)
