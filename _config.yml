@@ -56,7 +56,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Jonathan Seagull"
+  name   : "Charles Edwards"
   avatar : "/assets/images/seagull.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
