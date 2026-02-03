@@ -6,8 +6,7 @@ a rough estimate of the depletion time series \\x\\.
 This function assumes a logistic production function and uses input
 values for the intrinsic growth and carrying capacity. These would
 usually be obtained through calls to
-[`rCalc`](https://github.com/biomass-dynamic-models/lhm/reference/rCalc.html)
-in the lhm package and
+[`rCalc`](https://rdrr.io/pkg/lhm/man/rCalc.html) in the lhm package and
 [`getlogK`](https://github.com/biomass-dynamic-models/bdm/reference/getlogK.md).
 
 ## Usage

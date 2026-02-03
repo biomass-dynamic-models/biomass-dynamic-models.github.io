@@ -50,8 +50,7 @@ over the interval for \\ln(K)\\, using a least-squares measure of fit.
 The function can also be applied to a `bdmData` object, in which case a
 value for \\r\\ and the search interval must be provided. A value for
 \\r\\ would usually be obtained through a call to
-[`rCalc`](https://github.com/biomass-dynamic-models/lhm/reference/rCalc.html)
-in the lhm package.
+[`rCalc`](https://rdrr.io/pkg/lhm/man/rCalc.html) in the lhm package.
 
 ## Examples
 

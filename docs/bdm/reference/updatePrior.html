@@ -42,7 +42,7 @@ By default this function only updates the model code. The model will need to be 
 
     <div class="ref-description section level2">
     <p>This function can be used to update the priors for \(r\) and \(ln(K)\).</p>
-<p>The <span class="pkg">bdm</span> package by default assumes that the prior on \(r\) is log-normal and the prior for \(ln(K)\) is uniform. If the function is supplied with a <code><a href="https://github.com/biomass-dynamic-models/lhm/reference/prior-class.html" class="external-link">prior</a></code> class object then it will extract the log-normal distribution parameters for \(r\) and use regular expression matching to update the model code. If the function is provided with a named list then it can be used to update the priors for \(r\), \(ln(K)\) or the initial depletion \(x0\), in a similar manner. See the examples for how the list arguments are specified.</p>
+<p>The <span class="pkg">bdm</span> package by default assumes that the prior on \(r\) is log-normal and the prior for \(ln(K)\) is uniform. If the function is supplied with a <code><a href="https://rdrr.io/pkg/lhm/man/prior-class.html" class="external-link">prior</a></code> class object then it will extract the log-normal distribution parameters for \(r\) and use regular expression matching to update the model code. If the function is provided with a named list then it can be used to update the priors for \(r\), \(ln(K)\) or the initial depletion \(x0\), in a similar manner. See the examples for how the list arguments are specified.</p>
 <p>By default this function only updates the model code. The model will need to be re-compiled before it is run for the changes to take effect.</p>
     </div>
 
@@ -122,7 +122,7 @@ By default this function only updates the model code. The model will need to be 
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># update using a prior class</span></span></span>
 <span class="r-in"><span><span class="co"># object</span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/biomass-dynamic-models/r-packages/lhm" class="external-link">lhm</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/biomass-dynamic-models/lhm" class="external-link">lhm</a></span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> lhm version 1.0.0</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># create object containing</span></span></span>
@@ -132,7 +132,7 @@ By default this function only updates the model code. The model will need to be 
 <span class="r-in"><span><span class="va">cv</span> <span class="op">&lt;-</span> <span class="fl">0.2</span></span></span>
 <span class="r-in"><span><span class="va">sd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">1</span><span class="op">+</span><span class="va">cv</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="va">iter</span>,<span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">mu</span><span class="op">)</span><span class="op">-</span><span class="va">sd</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="fl">2</span>,<span class="va">sd</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://github.com/biomass-dynamic-models/lhm/reference/prior-class.html" class="external-link">prior</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lhm/man/prior-class.html" class="external-link">prior</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># update model</span></span></span>
 <span class="r-in"><span><span class="va">mdl</span> <span class="op">&lt;-</span> <span class="fu">updatePrior</span><span class="op">(</span><span class="va">mdl</span>, <span class="va">r</span><span class="op">)</span></span></span>

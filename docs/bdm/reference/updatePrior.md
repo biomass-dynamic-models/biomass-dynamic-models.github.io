@@ -4,13 +4,12 @@ This function can be used to update the priors for \\r\\ and \\ln(K)\\.
 
 The bdm package by default assumes that the prior on \\r\\ is log-normal
 and the prior for \\ln(K)\\ is uniform. If the function is supplied with
-a
-[`prior`](https://github.com/biomass-dynamic-models/lhm/reference/prior-class.html)
-class object then it will extract the log-normal distribution parameters
-for \\r\\ and use regular expression matching to update the model code.
-If the function is provided with a named list then it can be used to
-update the priors for \\r\\, \\ln(K)\\ or the initial depletion \\x0\\,
-in a similar manner. See the examples for how the list arguments are
+a [`prior`](https://rdrr.io/pkg/lhm/man/prior-class.html) class object
+then it will extract the log-normal distribution parameters for \\r\\
+and use regular expression matching to update the model code. If the
+function is provided with a named list then it can be used to update the
+priors for \\r\\, \\ln(K)\\ or the initial depletion \\x0\\, in a
+similar manner. See the examples for how the list arguments are
 specified.
 
 By default this function only updates the model code. The model will

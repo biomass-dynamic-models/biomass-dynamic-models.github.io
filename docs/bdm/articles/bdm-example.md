@@ -37,13 +37,12 @@ Life history data are available, allowing us to populate an object of
 the `lhm` class, which is obtained from the `lhm` (life-history module)
 package, and is used to store and manipulate life-history data.
 Monte-carlo samples are generated, and application of the
-[`lhm::rCalc`](https://github.com/biomass-dynamic-models/lhm/reference/rCalc.html)
-function to this class of object calcuates values of $`r`$ for each
-iteration, producing an object of the `prior` class. The `prior` class
-contains a numeric vector with an additional slot for holding parameters
-of the associated distribution. Currenly only the log-normal
-distribution is supported, with parameters stored in
-`object@lognormal_par`.
+[`lhm::rCalc`](https://rdrr.io/pkg/lhm/man/rCalc.html) function to this
+class of object calcuates values of $`r`$ for each iteration, producing
+an object of the `prior` class. The `prior` class contains a numeric
+vector with an additional slot for holding parameters of the associated
+distribution. Currenly only the log-normal distribution is supported,
+with parameters stored in `object@lognormal_par`.
 
 ``` r
 # initialise lhm data object for calculation of r with uncertainty
