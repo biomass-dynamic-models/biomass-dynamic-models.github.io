@@ -13,12 +13,12 @@ feature_row:
     url: "https://biomass-dynamic-models.github.io/docs/bdm"
     btn_class: "btn--primary"
     btn_label: "bdm"
-	excerpt: "View package code and vignettes for fitting a Bayesian biomass dynamic model to fisheries catch rate data."
+    excerpt: "View package code and vignettes for fitting a Bayesian biomass dynamic model to fisheries catch rate data."
   - title: "Intrinsic growth"
     url: "https://biomass-dynamic-models.github.io/docs/lhm"
     btn_class: "btn--primary"
     btn_label: "lhm" 
-	excerpt: "View package code and vignettes for preparing a prior of the intrinsic growth."
+    excerpt: "View package code and vignettes for preparing a prior of the intrinsic growth."
 ---
 
 {% include feature_row %}
