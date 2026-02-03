@@ -40,11 +40,11 @@ iter <- 1
 rdat <- lhm(ainf,iter)
 
 # assign life-history data
-nmort(rdat)    <- list(mu=0.18)
-size(rdat)     <- list(mu=list(Linf=106.5,k=0.229,t0=0.01)) 
-mass(rdat)     <- list(mu=list(a=1.7e-9,b=3.328))
-sr(rdat)       <- list(type='BH',mu=0.9)
-maturity(rdat) <- list(mu=list(acrit=8))
+nmort(rdat)    <- list(mu = 0.18)
+size(rdat)     <- list(mu = list(Linf = 106.5, k = 0.229, t0 = 0.01)) 
+mass(rdat)     <- list(mu = list(a = 1.7e-9, b = 3.328))
+sr(rdat)       <- list(type = 'BH', mu= 0.9)
+maturity(rdat) <- list(mu = list(acrit = 8))
 
 # calculate r
 r <- rCalc(rdat)
