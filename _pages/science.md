@@ -21,7 +21,7 @@ This has two estimable parameters, $K$ and the intrinsic rate of population grow
 r = \lim_{x \to 0} \frac{1}{x} \cdot g(x)
 \end{equation}
 
-The logistic model has a number of useful reference points associated with it, which can be obtained directly from the parameter estimates. These correspond to a maximum sustainable yield $MSY = r \cdot K / 4$ and the associated biomass $B^{MSY} = K / 2$. The harvest rate relative to $B^{MSY}$ is $H^{MSY} = r / 2$, and relative to K is $h^{MSY} = x^{MSY} \cdot r / 2$. If we define the ratio $\phi = B^{MSY} / K = x^{MSY}$, then the logistic model specifically assumes that $\phi = 0.5$. However this is usually inconsistent with predictions made by age structured models, which are based on a stock-recruitment function that often predicts $\phi < 0.5$. It is therefore desirable to implement a biomass dynamic model that has reference points consistent with an age-structured analogue. 
+The logistic model has a number of useful reference points associated with it, which can be obtained directly from the parameter estimates. These correspond to a maximum sustainable yield $MSY = r \cdot K / 4$ and the associated biomass $B^{MSY} = K / 2$. The harvest rate relative to $B^{MSY}$ is $H^{MSY} = r / 2$, and relative to $K$ is $h^{MSY} = x^{MSY} \cdot r / 2$. If we define the ratio $\phi = B^{MSY} / K = x^{MSY}$, then the logistic model specifically assumes that $\phi = 0.5$. However this is usually inconsistent with predictions made by age structured models, which are based on a stock-recruitment function that often predicts $\phi < 0.5$. It is therefore desirable to implement a biomass dynamic model that has reference points consistent with an age-structured analogue. 
 
 The logistic model was generalised by Pella and Tomlinson [^3] to allow $\phi \neq 0.5$ by introducing a shape parameter $p$:
 \begin{equation}
@@ -36,13 +36,15 @@ Equivalence of these equations can be acheived by noting that $p \equiv n - 1$.
 However, in both cases, the rate of population growth becomes infinite for $\phi \leq 1 / e \approx 0.37$, which occurs as $p \to 0$ (or $n \to 1$). Since $0.1 < \phi < 0.4$ for a typical age-structured model, modifications are required to ensure consistency with this property. These have typically involved a discontinuous solution to the production function. 
 
 A combined Fletcher-Schaefer hybrid model was derived by McAllister [^5] to allow $\phi < 0.5$. It has a discontinuous inflection point at $x^{MSY}$ with dynamics for values of $x < x^{MSY}$ governed by the logistic (Schaefer) model, and dynamics at higher biomass levels governed by the generalised (Fletcher) production model: 
-\begin{equation}
+
+$$
 g(x_{t}) =
 \begin{cases}
     r \cdot x_{t} \cdot \left(1 - \frac{x_{t}}{2\phi}\right) & \text{if } x \leq \phi \\
     \gamma \cdot m \cdot \left(x_t - x_t^{n}\right) & \text{if } x > \phi
 \end{cases}
-\end{equation} 
+$$
+
 \begin{equation}
 \phi = \left(\frac{1}{n}\right)^{(1/(n-1))}
 \end{equation}
