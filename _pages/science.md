@@ -29,7 +29,7 @@ g(x_t)=\frac{r}{p} \cdot x_t\left(1-x_t^p\right)
 \end{equation}
 To improve stability of the estimation, Fletcher [^4] reparameterised this model, writing it in the form:
 \begin{equation}
-g(x_t)= \gamma \cdot m \cdot x_t\left(1-x_t^(n - 1)\right)
+g(x_t)= \gamma \cdot m \cdot x_t\left(1-x_t^{(n - 1)}\right)
 \end{equation}
 Equivalence of these equations can be acheived by noting that $p \equiv n - 1$. 
 
@@ -39,8 +39,8 @@ A combined Fletcher-Schaefer hybrid model was derived by McAllister [^5] to allo
 \begin{equation}
 g(x_{t}) =
 \begin{cases}
-r \cdot x_{t} \cdot \left(1 - \frac{x_{t}}{2\phi}\right) &\text{if } x \leq \phi\\
-\gamma \cdot m \cdot \left(x_t - x_t^{n}\right) &\text{if } x > \phi
+    r \cdot x_{t} \cdot \left(1 - \frac{x_{t}}{2\phi}\right) & \text{if } x \leq \phi \\
+    \gamma \cdot m \cdot \left(x_t - x_t^{n}\right) & \text{if } x > \phi
 \end{cases}
 \end{equation} 
 \begin{equation}
@@ -50,7 +50,7 @@ r \cdot x_{t} \cdot \left(1 - \frac{x_{t}}{2\phi}\right) &\text{if } x \leq \phi
 \gamma=\frac{n^{n/(n-1)}}{n-1}
 \end{equation}
 \begin{equation}
-m = \frac{r\phi}{4}
+m = \frac{r \cdot \phi}{4}
 \end{equation}
 This allows $\phi$ to follow a range of more realistic values, whilst maintaining a biologically correct difinition for $r$. 
 
