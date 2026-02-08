@@ -48,7 +48,8 @@ $$
 \hat{q}_i = \exp\left(\frac{1}{n_t}\sum_t{\left\{ln(I_{it})-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right)
 $$
 
-If we assume that the biomass is exactly known for purposes of the estimation of $\hat{q}_i$, then:
+For known values of $B_t$, $q_i$ and $\sigma_o$, the expectation of $ln(\hat{q}_i)$ is equal to its true value:
+
 $$
 \begin{align}
 E[ln(\hat{q}_i)] &= \left[\frac{1}{n_t}\sum{\left\{E[ln(I_{it})]-E[ln(B_t)]\right\}} + \frac{\sigma_o^2}{2}\right]  \\
