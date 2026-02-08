@@ -8,12 +8,12 @@ toc_sticky: true
 <style>body {text-align: justify}</style>
 
 
-The package fits a state space biomass dynamic model using Bayesian methods, specifically the Hamiltonian MCMC implemented in the package rstan. To a large extent, the package is an external wrapper for **rstan**, providing functionality relevant to the intended application. The package is generalisable, meaning that any number of model formulations can be specified by the user. The default implements the Fletcher-Schaefer hybrid model mentioned above, with $\phi$ specified as an input value. As a default, $\phi=0.5$ (i.e. $n=2$), making it equivalent to the logistic model.   
+The package fits a state-space biomass dynamic model using Bayesian methods, specifically the Hamiltonian MCMC implemented in the package **rstan**. To a large extent, the package is an external wrapper for **rstan**, providing functionality relevant to the intended application. The package is generalisable, meaning that any model formulation can be specified by the user. The default implements the Fletcher-Schaefer hybrid model with $\phi$ specified as an input value. As a default, $\phi=0.5$ (i.e. $n=2$), making it equivalent to the logistic model.   
 
 ## Estimation framework
 Parameters are estimated within a Bayesian state-space framework. This re-formulates the process equation to include a time-dependent error term (the process error, $\epsilon^p$) and a parallel observation process that relates an abundance index $I$ to the unobserved biomass state with some degree of error (the observation error, $\epsilon^o$), according to an estimated catchability scalar $q$. 
 \begin{equation}
-x_{t+1} = \left(x_t+g(x_t)-h_t\right) \cdot \epsilon_t^p 
+x_{t+1} = \left(x_t + g(x_t) - h_t\right) \cdot \epsilon_t^p 
 \end{equation}
 \begin{equation}
 I_{it} = (q_i \cdot x_t)\cdot\epsilon_{it}^o  
@@ -33,7 +33,7 @@ ln(K) \sim U(.,.)
 \begin{equation}
 \epsilon_{..}^o \sim LN(-\sigma_o^2/2,\sigma_o^2)				      	
 \end{equation}
-The $r$ and $K$ parameters of the logistic model are highly correlated, and their estimation is helped through the use of an informative prior or priors. We assumed an uninformative log-uniform prior for $K$, but an informative log-normal prior for $r$. The expectation and variance for the prior on intrinsic growth, with $E(r)=\exp(\mu_r+\sigma_r^2/2)$ can be constructed from available life-history data using the function \code{lhm::rCalc}, which implements methods described by McAllister et al. 
+The $r$ and $K$ parameters of the logistic model are highly correlated, and their estimation is helped through the use of an informative prior or priors. We assumed an uninformative log-uniform prior for $K$, but an informative log-normal prior for $r$. The expectation and variance for the prior on intrinsic growth, with $E(r)=\exp(\mu_r+\sigma_r^2/2)$ can be constructed from available life-history data using the **lhm** package, which implements methods described by McAllister et al. 
 
 Log-normal prior distributions for the error terms are specified to have an expection of one, which gives an intuitive interpretation of the expected quantities.
 \begin{equation}
@@ -43,10 +43,13 @@ E(x_{t+1}) = x_t + g(x_t) - h_t
 E(I_{it}) = q_i \cdot x_t  
 \end{equation}
 The catchability $q$ is estimated analytically from its maximum posterior density estimate assuming an uninformatinve uniform prior (i.e. $q \sim U(.,.)$).
+
 \begin{equation}
-\hat{q}_i = \exp{\left(\frac{1}{n_t}\sum_t{\left\{ln(I_{it})-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right)}
+\hat{q}_i = exp{\left(\frac{1}{n_t}\sum_t{\left\{ln(I_{it})-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right)}
 \end{equation}
+
 If we assume that the biomass is exactly known for purposes of the estimation of $\hat{q}$, then $E[ln(B_t)] = ln(B_t)$. Since $E(ln(I_{it})) = ln(q_i.B_t)-\sigma_o^2/2$, then $E[ln(\hat{q}_{i})] = E[ln(q_i)]$ and $E[\hat{q}_{i}] = E[q_i]$ as required.
+
 \begin{align}
 E[ln(\hat{q}_i)] &= \left[\frac{1}{n_t}\sum{\left\{E[ln(I_{it})]-E[ln(B_t)]\right\}} + \frac{\sigma_o^2}{2}\right] \nonumber \\
 &= \left[\frac{1}{n_t}\sum{\left\{ln(q_i.B_t)-\frac{\sigma_o^2}{2}-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right] \nonumber \\
