@@ -14,9 +14,9 @@ x_{t+1} = x_t + g(x_t) - h_t
 \end{equation}
 where $h_t = C_t/K$ is the harvest rate relative to $K$. This type of model was first applied within a fisheries context by Schaefer [^1][^2], who implemented a logistic production function:
 \begin{equation}
-g(x_t) = r \cdot x_t \cdot \left(1-x_t\right)  	
+g(x_t) = \tilde{r} \cdot x_t \cdot \left(1-x_t\right)  	
 \end{equation}
-This has two estimable parameters, $K$ and the intrinsic rate of population growth $r$. The intrinsic growth rate is defined as the maximum rate as the population biomass goes to zero:
+This has two estimable parameters, $K$ and the intrinsic rate of population growth $r = \tilde{r}$. The intrinsic growth rate is defined as the maximum rate as the population biomass goes to zero:
 \begin{equation}
 r = \lim_{x \to 0} \frac{1}{x} \cdot g(x)
 \end{equation}
@@ -31,7 +31,7 @@ In this case, the maximum growth rate is $r = \tilde{r} / p$. To improve stabili
 \begin{equation}
 g(x_t)= \gamma \cdot m \cdot x_t \cdot \left(1 - x_t^{(n - 1)}\right)
 \end{equation}
-for which $r = \gamma cdot m$ and $\gamma = (n^(n/(n-1))) / (n-1)$.
+for which $r = \gamma \cdot m$ and $\gamma = (n^{(n/(n-1))}) / (n-1)$.
 
 In both cases, the rate of population growth becomes infinite for $\phi \leq 1 / e \approx 0.37$, which occurs as $p \to 0$ (or $n \to 1$). Since $0.1 < \phi < 0.4$ for a typical age-structured model, modifications are required to ensure consistency with this property. These have typically involved a discontinuous solution to the production function. 
 
