@@ -52,15 +52,15 @@ dfr <- rbind(dfr,data.frame(biomass = b,
 gg1 <- ggplot(dfr) + 
     geom_line(aes(x = biomass / K, y = production, col = model), linewidth = 1) + 
     labs(x = 'Biomass depletion', y = 'Surplus Production', col = 'Model') +
-    theme_bw(base_size = 16)
+    theme_bw(base_size = 21)
 
 gg2 <- ggplot(dfr) + 
     geom_line(aes(x = biomass / K, y = growth, col = model), linewidth = 1) + 
     labs(x = 'Biomass depletion', y = 'Production per unit biomass', col = 'Model') +
-    theme_bw(base_size = 16)
+    theme_bw(base_size = 21)
 
 gg <- ggpubr::ggarrange(gg1, gg2, common.legend = TRUE, legend = "bottom")
-ggsave(gg, file = "fig1.png", width = 14, height = 5)
+ggsave(gg, file = "fig1.svg", width = 14, height = 5)
 
 
 

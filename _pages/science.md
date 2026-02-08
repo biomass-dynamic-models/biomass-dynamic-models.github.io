@@ -54,10 +54,10 @@ $$
 \begin{equation}
 m = \frac{r \cdot \phi}{4}
 \end{equation}
-This allows $\phi$ to follow a range of more realistic values, whilst maintaining a biologically correct difinition for $r$. 
+This allows $\phi$ to follow a range of more realistic values, whilst maintaining a biologically correct definition for $r$. 
 
 
-![fig1](/assets/images/fig1.png)
+![fig1](/assets/images/fig1.svg)
 
 -----------------------------------
 # References
