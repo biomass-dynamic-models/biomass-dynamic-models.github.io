@@ -42,13 +42,15 @@ E(x_{t+1}) = x_t + g(x_t) - h_t
 \begin{equation}
 E(I_{it}) = q_i \cdot x_t  
 \end{equation}
-The catchability $q$ is estimated analytically from its maximum posterior density estimate assuming an uninformatinve uniform prior (i.e. $q \sim U(.,.)$).
+The catchability $q$ is estimated analytically from its maximum posterior density estimate assuming an uninformative uniform prior (i.e. $q \sim U(.,.)$).
 
 $$
-\hat{q}_i = exp(\left(\frac{1}{n_t}\sum_t{\left\{ln(I_{it})-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right))
+\hat{q}_i = \exp\left(\frac{1}{n_t}\sum_t{\left\{ln(I_{it})-ln(B_t)\right\}} + \frac{\sigma_o^2}{2}\right)
 $$
 
-If we assume that the biomass is exactly known for purposes of the estimation of $\hat{q}$, then $E[ln(B_t)] = ln(B_t)$. Since $E(ln(I_{it})) = ln(q_i \cdot B_t) - \sigma_o^2/2$, then $E[ln(\hat{q}_{i})] = E[ln(q_i)]$ and $E[\hat{q}_{i}] = E[q_i]$ as required.
+If we assume that the biomass is exactly known for purposes of the estimation of $\hat{q}$, then $E[ln(B_t)] = ln(B_t)$. Since $E(ln(I_{it})) = ln(q_i \cdot B_t) - \sigma_o^2/2$, then $$E[ln(\hat{q}_{i})] = E[ln(q_i)]$$ 
+
+and $$E[\hat{q}_{i}] = E[q_i]$$ as required.
 
 $$
 \begin{align}
