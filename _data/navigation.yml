@@ -1,4 +1,6 @@
 main:
+  - title: "About"
+    url: /about/
   - title: "Model description"
     url: /science/
   - title: "Fitting and diagnostics"
