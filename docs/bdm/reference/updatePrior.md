@@ -92,7 +92,7 @@ getlogK(mdl)
 # update using a prior class
 # object
 library(lhm)
-#> lhm version 1.0.0
+#> lhm version 1.0.0 (03-Feb-2026)
 
 # create object containing
 # vector of r values
