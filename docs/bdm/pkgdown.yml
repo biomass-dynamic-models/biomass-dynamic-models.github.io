@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   bdm: bdm.html
-last_built: 2026-02-16T14:13Z
+last_built: 2026-02-16T14:32Z
 urls:
   reference: https://github.com/biomass-dynamic-models/bdm/reference
   article: https://github.com/biomass-dynamic-models/bdm/articles
