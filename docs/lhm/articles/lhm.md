@@ -1,4 +1,4 @@
-# Life history module (lhm)
+# Life history module
 
 ## Development of a prior for the intrinsic growth rate
 
