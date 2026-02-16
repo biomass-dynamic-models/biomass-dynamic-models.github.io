@@ -1,4 +1,4 @@
-# Example application of \`bdm\`
+# Biomass dynamic model
 
 Example applications of the `bdm` R-package are given here, based on
 data from fisheries in New Zealand.
