@@ -56,21 +56,18 @@ m = \frac{r \cdot \phi}{4}
 \end{equation}
 This allows $\phi$ to follow a range of more realistic values, whilst maintaining a biologically correct definition for $r$. 
 
-
-![fig1](/assets/images/fig1.svg)
-
 -----------------------------------
 # References
 
-[^1]: Schaefer (1954)
+[^1]: Schaefer, M. B. (1954) Some aspects of the dynamics of populations important to the management of commercial marine fisheries. Bulletin of the Inter-American Tropical Tuna Commission Bulletin, 1: 26-56.
 
-[^2]: Schaefer (1957)
+[^2]: Schaefer, M. B. (1957) A Study of the Dynamics of the Fishery for Yellowfin Tuna in the Eastern Tropical Pacific Ocean. Bulletin of the Inter-American Tropical Tuna Commission Bulletin, 2: 247-285.
 
-[^3]: Pella (1969)
+[^3]: Pella, J. J. and Tomlinson, P. K. (1969) A generalized stock production model. Inter-American Tropical Tuna Commission Bulletin, 13: 421-496.
 
-[^4]: Fletcher (1978)
+[^4]: Fletcher, R. I. (1978) On the restructuring of the Pella-Tomlinson system. Fishery Bulletin, 76(3): 515-521.
 
-[^5]: McAllister (2000)
+[^5]: McAllister, M. K., Babcock, E. A., Pikitch, E. K. and Prager, M. H. (2000) Application of a non-equilibrium generalized production model to South and North Atlantic swordfish: combining Bayesian and demographic methods for parameter estimation. Collected Volume of Scientific Papers ICCAT, 51(5): 1253-1550.
 
 
 
