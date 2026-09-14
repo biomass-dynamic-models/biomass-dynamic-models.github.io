@@ -12,7 +12,7 @@ Biomass dynamic models in fisheries have a long history of application. Because 
 \begin{equation}
 x_{t+1} = x_t + g(x_t) - h_t       	
 \end{equation}
-where $h_t = C_t/K$ is the harvest rate relative to $K$. This type of model was first applied within a fisheries context by Schaefer [^1,^2], who implemented a logistic production function:
+where $h_t = C_t/K$ is the harvest rate relative to $K$. This type of model was first applied within a fisheries context by Schaefer [^1][^2], who implemented a logistic production function:
 \begin{equation}
 g(x_t) = \tilde{r} \cdot x_t \cdot \left(1-x_t\right)  	
 \end{equation}
