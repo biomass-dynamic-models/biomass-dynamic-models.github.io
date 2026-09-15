@@ -4,6 +4,7 @@ Example applications of the `bdm` R-package are given here, based on
 data from fisheries in New Zealand.
 
 ``` r
+
 library(bdm)
 library(lhm)
 library(ggplot2)
@@ -21,6 +22,7 @@ survey index. The data are used to initialise an empirical data object
 for details.
 
 ``` r
+
 data(haknz)
 dat <- bdmData(harvest = haknz$landings, index = cbind(haknz$survey, haknz$cpue),
     time = haknz$year, renormalise = TRUE)
@@ -45,6 +47,7 @@ distribution. Currenly only the log-normal distribution is supported,
 with parameters stored in `object@lognormal_par`.
 
 ``` r
+
 # initialise lhm data object for calculation of r with uncertainty
 rdat <- lhm(ainf = 100, iter = 200)
 
@@ -80,6 +83,7 @@ which takes as input the `bdm` and `prior` objects. This function
 updates the model code directly, following which it must be compiled.
 
 ``` r
+
 mdl <- bdm()
 mdl <- updatePrior(mdl, r)
 mdl <- compiler(mdl)
@@ -99,6 +103,7 @@ function. For chatham rise hake we assume that MSY occurs at 40% of the
 carrying capacity (i.e. $`\phi=0.4`$).
 
 ``` r
+
 shape(dat) <- 0.4
 ```
 
@@ -110,6 +115,7 @@ sampling routine. Arguments match those used by the
 function from `rstan`.
 
 ``` r
+
 mdl <- sampler(mdl, dat, run = "NZ hake", chains = 2, iter = 2000, init = "fixed")
 ```
 
@@ -122,6 +128,7 @@ and
 functions, respectively.
 
 ``` r
+
 traceplot(mdl, inc_warmup = FALSE) + theme_bw()
 ```
 
@@ -131,6 +138,7 @@ fit.](fig/bdm-examples-haktrace-1.png)
 Traceplots for chatham rise hake fit.
 
 ``` r
+
 histplot(mdl, par = c("r", "logK", "q"))
 ```
 
@@ -140,6 +148,7 @@ fit.](fig/bdm-examples-hakhist-1.png)
 Posterior histograms for chatham rise hake fit.
 
 ``` r
+
 cumsumplot(mdl, par = c("r", "logK"))
 ```
 
@@ -157,6 +166,7 @@ Currently it can also be used to visualise `biomass`,
 `surplus_production`, and the `harvest_rate`.
 
 ``` r
+
 dynplot(mdl)
 ```
 
@@ -175,6 +185,7 @@ before they are printed. For example, to add a title to the plot of
 surplus production and change the y-axis one could type:
 
 ``` r
+
 gg <- dynplot(mdl, pars = c("harvest_rate", "depletion"))
 gg <- gg + ggtitle("Model predicted dynamics") + theme_bw()
 print(gg)
@@ -186,16 +197,16 @@ information from the fitted model object as a `list` that contains
 and `harvest_rate_at_msy`. These reference points are functions of
 $`r`$, $`K`$ and $`\phi`$, and therefore (with the exception of $`\phi`$
 itself) have a posterior distribution. We can extract the median values
-and write them in a table using
-[`pander::pandoc.table`](https://rdrr.io/pkg/pander/man/pandoc.table.return.html):
+and write them in a table using `pander::pandoc.table`:
 
 ``` r
+
 knitr::kable(data.frame(lapply(refpoints(mdl), median)), digits = 2)
 ```
 
 |    r |  logK |     msy | depletion_at_msy | biomass_at_msy | harvest_rate_at_msy |
 |-----:|------:|--------:|-----------------:|---------------:|--------------------:|
-| 0.26 | 10.78 | 2421.12 |              0.4 |       19161.22 |                0.13 |
+| 0.25 | 10.82 | 2477.07 |              0.4 |       20055.43 |                0.12 |
 
 Similarly, the function
 [`status()`](https://github.com/biomass-dynamic-models/bdm/reference/status.md)
@@ -205,6 +216,7 @@ final assessment year, i.e. `dat$time[dat$T]`. We could easily plot
 these as histograms, using for example:
 
 ``` r
+
 sta <- status(mdl)
 dfr <- bind_rows(lapply(names(sta), function(x) data.frame(name = x, value = as.numeric(sta[[x]]))))
 gg <- ggplot(dfr) + geom_histogram(aes(x = value)) + facet_wrap(~name, scales = "free_x",
@@ -233,6 +245,7 @@ which creates a `data.frame` in the appropriate format for the `kobe`
 package.
 
 ``` r
+
 assmt <- as.kobe(mdl, year = max(mdl@data$time))
 ```
 
@@ -247,6 +260,7 @@ using the
 function.
 
 ``` r
+
 kobePhase(assmt) + geom_point(aes(stock, harvest), alpha = 0.5, col = "grey") +
     geom_density2d(aes(stock, harvest), col = "blue", linewidth = 1)
 ```
@@ -260,6 +274,7 @@ status over time; specifically the probability that the stock is in the
 green, red and yellow quadrants of the phase plane.
 
 ``` r
+
 assmt <- as.kobe(mdl, what = "summary")
 knitr::kable(assmt, digits = 2)
 ```
@@ -268,12 +283,13 @@ The current status estimates of the stock can be obtained in a similar
 manner to the reference points above.
 
 ``` r
+
 knitr::kable(data.frame(lapply(status(mdl), median)), digits = 2)
 ```
 
 | current_biomass | current_depletion | current_harvest_rate | current_biomass_over_bmsy | current_depletion_over_dmsy | current_harvest_rate_over_hmsy |
 |---:|---:|---:|---:|---:|---:|
-| 19707.33 | 0.43 | 0.05 | 1.07 | 1.07 | 0.38 |
+| 20414.06 | 0.43 | 0.05 | 1.07 | 1.07 | 0.38 |
 
 ### Projections
 
@@ -283,6 +299,7 @@ harvest rate options. The `project` function returns a `list` (see
 which can be manipulated to summarise the results. For example:
 
 ``` r
+
 # project forward under a variety of constant harvest rate scenarios
 mdl.project <- project(mdl, harvest = c(0.01, 0.025, 0.05), time = 100)
 
@@ -292,6 +309,6 @@ knitr::kable(apply(mdl.project$depletion, 2:3, median)[nrow(dep.project), ,
     drop = FALSE], digits = 2)
 ```
 
-|      |    1 |    2 |    3 |
-|:-----|-----:|-----:|-----:|
-| 2112 | 0.93 | 0.84 | 0.71 |
+|      |    1 |    2 |   3 |
+|:-----|-----:|-----:|----:|
+| 2112 | 0.93 | 0.84 | 0.7 |

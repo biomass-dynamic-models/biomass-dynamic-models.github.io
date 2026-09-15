@@ -92,7 +92,7 @@ getlogK(mdl)
 # update using a prior class
 # object
 library(lhm)
-#> lhm version 1.0.0 (03-Feb-2026)
+#> lhm version 1.0.0 (16-Feb-2026)
 
 # create object containing
 # vector of r values
@@ -109,7 +109,7 @@ mdl <- updatePrior(mdl, r)
 
 # check update
 mean(log(r))
-#> [1] -2.303153
+#> [1] -2.296473
 getr(mdl)[['E[log(x)]']]
 #> NULL
 ```
