@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   lhm-example: lhm-example.html
   lhm: lhm.html
-last_built: 2026-09-15T12:11Z
+last_built: 2026-09-15T12:51Z
 urls:
   reference: https://github.com/biomass-dynamic-models/lhm/reference
   article: https://github.com/biomass-dynamic-models/lhm/articles
