@@ -33,7 +33,7 @@ ln(K) \sim U(.,.)
 \begin{equation}
 \epsilon_{..}^o \sim LN(-\sigma_o^2/2,\sigma_o^2)				      	
 \end{equation}
-The $r$ and $K$ parameters of the logistic model are highly correlated, and their estimation is helped through the use of an informative prior or priors. We assumed an uninformative log-uniform prior for $K$, but an informative log-normal prior for $r$. The expectation and variance for the prior on intrinsic growth, with $E[r] = \exp(\mu_r+\sigma_r^2/2)$ can be constructed from available life-history data using the **lhm** package. 
+The $r$ and $K$ parameters of the logistic model are highly correlated, and their estimation is helped through the use of an informative prior or priors. We assumed an uninformative log-uniform prior for $K$, but an informative log-normal prior for $r$. The expectation and variance for the prior on intrinsic growth, with $E[r] = \exp(\mu_r+\sigma_r^2/2)$ can be constructed from available life-history data using the **lhm** package[^1]. 
 
 Log-normal prior distributions for the error terms are specified to have an expection of one, which gives an intuitive interpretation of the expected quantities.
 \begin{equation}
@@ -57,3 +57,8 @@ E[ln(\hat{q}_i)] &= \left[\frac{1}{n_t}\sum{\left\{E[ln(I_{it})]-E[ln(B_t)]\righ
 &=ln(q_i)
 \end{align}
 $$
+
+-----------------------------------
+# References
+
+[^1]: Stanley, R.D., M. McAllister, P. Starr and N. Olsen. (2009) Stock assessment for bocaccio (Sebastes paucispinis) in British Columbia waters. DFO Can. Sci. Advis. Sec. Res. Doc. 2009/055. 
