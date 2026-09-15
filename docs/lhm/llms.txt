@@ -1,4 +1,4 @@
-# Life history module
+# lhm
 
 Module for the storage and processing of life-history data, designed to
 allow the calculation of derived parameters from life-history theory.
