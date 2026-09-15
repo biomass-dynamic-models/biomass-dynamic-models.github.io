@@ -1,4 +1,4 @@
-# A new (non-default) model application of \`bdm\`
+# A non-default model application
 
 Example applications of non-default (i.e. user-specified) models in the
 `bdm` R-package are given here, based on data from fisheries in New
