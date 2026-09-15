@@ -1,6 +1,6 @@
-# Bayesian biomass dynamic model
+# bdm
 
-# Instructions
+# Installation
 
 First, install the `rstan` and `remotes` packages from CRAN:
 
