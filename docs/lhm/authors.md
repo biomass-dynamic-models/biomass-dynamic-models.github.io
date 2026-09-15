@@ -9,7 +9,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/biomass-dynamic-models/lhm/blob/HEAD/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/biomass-dynamic-models/lhm/blob/main/DESCRIPTION)
 
 Edwards C, McAllister M (2026). *lhm: Life-history module*. R package
 version 1.0.0, <https://github.com/biomass-dynamic-models/lhm>.

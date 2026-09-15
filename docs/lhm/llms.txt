@@ -11,6 +11,22 @@ status using empirical catch and abundance data. In this instance the
 intrinsic growth rate calculated by `lhm` is used as prior for model
 fitting by `bdm`.
 
+# Installation
+
+First, install the `remotes` packages from CRAN:
+
+``` R
+# Install packages
+install.packages("remotes")
+```
+
+Then install `lhm` directly from GitHub:
+
+``` R
+# remotes command to get lhm from GitHub
+remotes::install_github("biomass-dynamic-models/lhm")
+```
+
 # Package index
 
 ## All functions
@@ -67,5 +83,7 @@ fitting by `bdm`.
 
 ### All vignettes
 
-- [Life history
-  module](https://github.com/biomass-dynamic-models/lhm/articles/lhm.md):
+- [Example life history module
+  application](https://github.com/biomass-dynamic-models/lhm/articles/lhm-example.md):
+- [Introduction to
+  lhm](https://github.com/biomass-dynamic-models/lhm/articles/lhm.md):

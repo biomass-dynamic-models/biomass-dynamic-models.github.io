@@ -1,9 +1,10 @@
-pandoc: 3.7.0.2
-pkgdown: 2.2.0
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
+  lhm-example: lhm-example.html
   lhm: lhm.html
-last_built: 2026-02-16T14:27Z
+last_built: 2026-09-15T11:52Z
 urls:
   reference: https://github.com/biomass-dynamic-models/lhm/reference
   article: https://github.com/biomass-dynamic-models/lhm/articles

@@ -10,3 +10,19 @@ implements a Bayesian biomass dynamic model for estimation of population
 status using empirical catch and abundance data. In this instance the
 intrinsic growth rate calculated by `lhm` is used as prior for model
 fitting by `bdm`.
+
+# Installation
+
+First, install the `remotes` packages from CRAN:
+
+``` R
+# Install packages
+install.packages("remotes")
+```
+
+Then install `lhm` directly from GitHub:
+
+``` R
+# remotes command to get lhm from GitHub
+remotes::install_github("biomass-dynamic-models/lhm")
+```
